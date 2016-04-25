@@ -1,0 +1,15 @@
+#Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Django :
+*.log
+
+# SQLite
+*.sqlite3
+
+# OSX
+.DS_Store
+
+# Node modules
+node_modules/
