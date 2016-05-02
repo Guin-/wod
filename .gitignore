@@ -15,4 +15,4 @@ __pycache__/
 node_modules/
 
 # Bundled js
-assets/bundles/
+frontend/src/bundles/
