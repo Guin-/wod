@@ -53,6 +53,7 @@ INSTALLED_APPS = (
     'rest_framework',
     # my apps
     'workouts',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
