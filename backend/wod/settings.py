@@ -28,13 +28,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, '../frontend'),
 )
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'BUNDLE_DIR_NAME': 'src/bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, '../webpack-stats.json'),
     }
 }
 
