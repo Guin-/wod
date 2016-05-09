@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './hello';
+import WodList from './components/wodList';
 
-ReactDOM.render(<Hello />, document.getElementById('react-app'))
+const wodData = [
+  {id: 1, name: 'wod one', description: 'this is wod one'},
+  {id: 2, name: 'wod two', description: 'this is wod two'}
+];
+
+ReactDOM.render(<WodList data={wodData} />, document.getElementById('react-app'))
