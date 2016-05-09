@@ -10,7 +10,7 @@ module.exports = {
 
   // location of written bundled files
   output: {
-    path: path.resolve('./src/bundles/'),
+    path: path.resolve('./frontend/src/bundles/'),
     filename: '[name]-[hash].js',
   },
 
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   resolve: {
-    modulesDirectories: ['src', 'node_modules'],
+    modulesDirectories: ['node_modules'],
     extensions: ['', '.js', '.jsx']
   },
 }
