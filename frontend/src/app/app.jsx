@@ -7,4 +7,4 @@ const wodData = [
   {id: 2, name: 'wod two', description: 'this is wod two'}
 ];
 
-ReactDOM.render(<WodList data={wodData} />, document.getElementById('react-app'))
+ReactDOM.render(<WodList url='api/workouts' />, document.getElementById('react-app'))

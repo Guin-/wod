@@ -16,7 +16,11 @@ module.exports = {
 
   plugins: [
     new BundleTracker({filename: './webpack-stats.json'}),
-    //new webpack.NoErrorsPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.providePlugin({
+      'Promise': 'es6-promise',
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    })
   ],
 
   module: {
