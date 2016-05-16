@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 const propTypes = {};
 const defaultProps = {};
 
 
-class Wod extends React.Component {
+class Wod extends Component {
   constructor(props) {
     super(props);
   }
