@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import WodList from './wodList';
+import RandomWod from './RandomWod';
 
 const propTypes = { url: PropTypes.string };
 const defaultProps = {};
@@ -25,9 +26,14 @@ class WodBox extends Component {
 
   render () {
     return (
-      <div className='wod-box'>
-        <h2>Wods</h2>
-        <WodList data={this.state.data} />
+      <div>
+        <div className='random-wod'>
+          <RandomWod data={this.state.data} />
+        </div>
+        <div className='wod-box'>
+          <h2>Wods</h2>
+          <WodList data={this.state.data} />
+        </div>
       </div>
     );
   }
