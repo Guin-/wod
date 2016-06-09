@@ -1,46 +1,50 @@
 import React, { Component, PropTypes } from 'react';
 import WodList from './wodList';
-import RandomWod from './RandomWod';
 
-const propTypes = { url: PropTypes.string };
-const defaultProps = {};
-
+/*
+const {
+  arrayOf,
+  string
+} = React.PropTypes;
+*/
 
 class WodBox extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [] };
-  }
-
-  loadWorkouts() {
-    fetch(this.props.url)
-      .then(response => response.json())
-      .then(data => this.setState({ data: data }))
-      .catch(err => console.error(this.props.url, err.toString()))
-  }
-
-  componentDidMount() {
-    this.loadWorkouts()
-    console.log(this.state.data);
   }
 
   render () {
+    const {
+      randomWod,
+      wods
+    } = this.props
+
     return (
       <div>
-        <div className='random-wod'>
-          <RandomWod data={this.state.data} />
+        <div>
+          <button onClick={this.props.onClick}>Random Wod</button>
+          <div>
+            {randomWod ? randomWod: 'I will be a random wod'}
+          </div>
         </div>
-        <div className='wod-box'>
+        <div>
           <h2>Wods</h2>
-          <WodList data={this.state.data} />
+          <WodList data={wods} />
         </div>
       </div>
     );
   }
 }
+/*
+WodBox.propTypes = {
+  randomWod: string
+  wods: arrayOf(string)
+};
 
-WodBox.propTypes = propTypes;
-WodBox.defaultProps = defaultProps;
-
+WodBox.defaultProps = {
+  randomWod: null,
+  wods: []
+};
+*/
 export default WodBox;
 
