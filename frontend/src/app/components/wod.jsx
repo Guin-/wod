@@ -12,9 +12,9 @@ class Wod extends Component {
   render () {
     return (
       <div className="wod">
-        <h1 className="wodName">
+        <h3 className="wodName">
           {this.props.name}
-        </h1>
+        </h3>
         {this.props.children}
       </div>
     );
